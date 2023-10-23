@@ -46,6 +46,7 @@ def logistic_func(x):
     return 1 / (1 + torch.exp(-x))
 parametrizations = dict(Kumar='Kumaraswamy', GLogit='Gauss_Logit', gaussian='Gaussian', GEM='GEM', Dir='Dirichlet_dist', GD='GDVAE', gdwo='GDWO')
 
+# set data loader here
 def dataDir(analysis =False, MNIST = False, FashionMNIST = False, KMNIST=False, USPS=False, CIFAR10_ = False, CIFAR10 = False, Country211=False, SVHN = False):
     if MNIST:
         train_dataset = datasets.MNIST('../data', train=True, download=True,
